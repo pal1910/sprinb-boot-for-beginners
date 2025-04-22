@@ -3,7 +3,6 @@ name: build and deploy spring app
 on:
   push:
     branches:
-      - main
       - cicd
   workflow_dispatch:
 
