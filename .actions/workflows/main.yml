@@ -28,6 +28,9 @@ jobs:
               mvn clean
               mvn -B package --file pom.txt
                 
+                name: Test Workflow
+
+
            
                 
 
