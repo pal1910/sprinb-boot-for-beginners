@@ -22,12 +22,12 @@ jobs:
               java-version: 17
 
           - name: unit tests
-            run: mvn -B test --file pom.txt
+            run: mvn -B test --file pom.xml
 
           - name: build the application
             run: |
               mvn clean
-              mvn -B package --file pom.txt
+              mvn -B package --file pom.xml
                 
                 name: Test Workflow
 
