@@ -2,9 +2,9 @@ FROM openjdk:17-jdk
 
 WORKDIR /app
 
-COPY sprinbdemo-1.0.0.jar /app/sprinbdemo.jar
+COPY target/*.jar /app/app/*.jar
 
 EXPOSE 8080
 
-CMD ["java", "-jar", "springdemo.jar"]
+CMD ["java", "-jar", "app.jar"]
 
