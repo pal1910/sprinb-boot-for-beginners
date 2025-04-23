@@ -2,7 +2,7 @@ FROM openjdk:17-jdk
 
 WORKDIR /app
 
-COPY target/sprinbdemo-1.0.0.jar /app/sprinbdemo.jar
+COPY sprinbdemo-1.0.0.jar /app/sprinbdemo.jar
 
 EXPOSE 8080
 
