@@ -35,11 +35,11 @@ jobs:
            context: .
            dockerfile: Dockerfile
            push: false
-           tags:${{ secrets.Docker_hub_username }} /spring-boot-for-beginners: latest
+           tags:${{ secrets.Dockerhub_username }} /spring-boot-for-beginners: latest
        -  name : login to docker hub
           uses: docker/login-action@v1
           with:
-            username: ${{ secrets.Docker_hub_username }}
+            username: ${{ secrets.Dockerhub_username }}
             password: ${{ secrets.Docker_hubaccess_token }}
 
        -  name: Push to docker hub
@@ -48,7 +48,7 @@ jobs:
             context: .
             dockerfile: Dockerfile
             push: true
-            tags:${{ secrets.Docker_hub_usename }} /spring-boot-for-beginners: latest
+            tags:${{ secrets.Dockerhub_username }} /spring-boot-for-beginners: latest
 
 
 
