@@ -35,13 +35,13 @@ jobs:
            username: ${{ secrets.DOCKERHUB_USERNAME }}
            password: ${{ secrets.DOCKER_HUBACCESS_TOKEN }}
 
-       - name: build and Push docker image
+       - name: build and push docker image
          uses: docker/build-push-action@v5
          with:
            context: .
            file: Dockerfile
            push: true
-           tags: ${{ secrets.pal1910 }} sprinb-boot-for-beginners:latest
+           tags: ${{ secrets.pal1910 }} spring-boot-for-beginners:latest
 
 
 
