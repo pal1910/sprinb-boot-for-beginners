@@ -29,26 +29,19 @@ jobs:
            mvn clean
            mvn -B package --file pom.xml
 
-       - name: build docker image
+       - name : login to Docker hub
+         uses: docker/login-action@v2
+         with:
+           username: ${{ secrets.DOCKERHUB_USERNAME }}
+           password: ${{ secrets.DOCKER_HUBACCESS_TOKEN }}
+
+       - name: build and Push docker image
          uses: docker/build-push-action@v5
          with:
            context: .
            file: Dockerfile
-           push: false
-           tags: ${{ secrets.DOCKERHUB_USERNAME }}/sprinb-boot-for-beginners:latest
-       -  name : login to Docker hub
-          uses: docker/login-action@v2
-          with:
-            username: ${{ secrets.DOCKERHUB_USERNAME }}
-            password: ${{ secrets.DOCKER_HUBACCESS_TOKEN }}
-
-       -  name: Push to docker hub
-          uses: docker/build-push-action@v5
-          with:
-            context: .
-            file: Dockerfile
-            push: true
-            tags: ${{ secrets.pal1910 }}/sprinb-boot-for-beginners:latest
+           push: true
+           tags: ${{ secrets.pal1910 }}/spring-boot-for-beginners:latest
 
 
 
