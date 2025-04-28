@@ -41,7 +41,7 @@ jobs:
            context: .
            file: Dockerfile
            push: true
-           tags: ${{ secrets.pal1910 }}/spring-boot-for-beginners:latest }}
+           tags: ${{ secrets.DOCKERHUB_USERNAME }}/spring-boot-for-beginners:latest }}
 
 
 
