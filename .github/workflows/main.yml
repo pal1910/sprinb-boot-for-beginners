@@ -48,7 +48,7 @@ jobs:
             context: .
             dockerfile: Dockerfile
             push: true
-            tags:${{ pal1910 }} /spring-boot-for-beginners: latest
+            tags:${{ pal1910 }}/spring-boot-for-beginners: latest
 
 
 
